@@ -36,7 +36,7 @@ if __name__ == '__main__':
         "You will be provided with a description of an animal. "
         "Your job is to analyze the description step-by-step and determine if the animal is a cat, a dog, or a turtle. "
         "Remember, concepts from two tags should be included. "
-        "You will be outputting a dictionary in the following format: "
+        "You will be outputting a json in the following format: "
         "{output} "
         "Few-shot examples will have system prompts encapsulated in the delimiter '#####', and your output should not include the '#####' delimiters. "
         "Here are the few-shot examples: "
@@ -44,7 +44,7 @@ if __name__ == '__main__':
         "Remember to use double quotes \" for key values. "
         "Here is the input description: {description}"
     )
-    ])
+    ]).partial(format_instructions=parser.get_format_instructions())
     llm = ChatOpenAI(model="gpt-3.5-turbo", temperature=0.7)
     # Build Output Template
     outputformat = """{"reasoning":"<content>","result":"<content>"}"""
