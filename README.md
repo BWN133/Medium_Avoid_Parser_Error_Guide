@@ -32,3 +32,4 @@ This project is licensed under the MIT License.
 ## Contact
 
 For any questions or feedback, feel free to contact the project maintainers.
+Email: by2365@columbia.edu / bowen.yang1335@gmail.com
